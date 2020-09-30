@@ -19,7 +19,7 @@ sudo apt-get install -y software-properties-common && sudo apt-add-repository co
 
 sudo apt-get update
 
-sudo apt-get install -y openbox obmenu obconf rxvt-unicode micro mousepad compton compton-conf firefox-esr pcmanfm tint2 menu pulseaudio numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop disk-manager sysstat acpi hardinfo hddtemp wicd k3b i3lock aptitude gnome-disk-utility python3-pip python-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git qbittorrent wmctrl xinit xorg xserver-xorg
+sudo apt-get install -y openbox obconf rxvt-unicode micro mousepad compton compton-conf firefox-esr pcmanfm tint2 menu pulseaudio numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop disk-manager sysstat acpi hardinfo hddtemp wicd k3b i3lock aptitude gnome-disk-utility python3-pip python-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git qbittorrent wmctrl xinit xorg xserver-xorg
 
 echo "exec openbox-session" >> ~/.xinitrc
 
