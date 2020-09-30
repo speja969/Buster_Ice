@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Terminal emulator">
+			<action name="Execute">
+				<execute>x-terminal-emulator</execute>
+			</action>
+		</item>
+		<item label="Web browser">
+			<action name="Execute">
+				<execute>x-www-browser</execute>
+			</action>
+		</item>
+		<item label="Synaptic">
+			<action name="Execute">
+				<execute>synaptic-pkexec</execute>
+			</action>
+		</item>
+		<!-- This requires the presence of the 'openbox-menu' package to work -->
+		<item label="htop">
+			<action name="Execute">
+				<execute>x-terminal-emulator -T 'htop task manager' -e htop</execute>
+			</action>
+		</item>
+		<separator/>
+		<separator/>
+		<item label="PCManFM">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<item label="Double Commander">
+			<action name="Execute">
+				<execute>doublecmd</execute>
+			</action>
+		</item>
+		<item label="Ranger">
+			<action name="Execute">
+				<execute>x-terminal-emulator -T 'ranger task manager' -e ranger</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Geany">
+			<action name="Execute">
+				<execute>geany</execute>
+			</action>
+		</item>
+		<item label="Mousepad">
+			<action name="Execute">
+				<execute>mousepad</execute>
+			</action>
+		</item>
+		<separator/>
+		<separator/>
+		<item label="WPS-Writer">
+			<action name="Execute">
+				<execute>wps</execute>
+			</action>
+		</item>
+		<item label="WPS-Presentation">
+			<action name="Execute">
+				<execute>wpp</execute>
+			</action>
+		</item>
+		<item label="WPS-Spreadsheets">
+			<action name="Execute">
+				<execute>et</execute>
+			</action>
+		</item>
+		<item label="WPS-PDF">
+			<action name="Execute">
+				<execute>wpspdf</execute>
+			</action>
+		</item>
+		<separator/>
+		<separator/>
+		<menu execute="/usr/bin/obamenu" id="applications-menu" label="Applications"/>
+		<separator/>
+		<separator/>
+		<item label="VLC Player">
+			<action name="Execute">
+				<execute>vlc</execute>
+			</action>
+		</item>
+		<item label="ncmpcpp">
+			<action name="Execute">
+				<execute>x-terminal-emulator -T 'ncmpcpp' -e ncmpcpp</execute>
+			</action>
+		</item>
+		<separator/>
+		<separator/>
+		<item label="OBmenu">
+			<action name="Execute">
+				<execute>obmenu</execute>
+			</action>
+		</item>
+		<item label="ObConf">
+			<action name="Execute">
+				<execute>obconf</execute>
+			</action>
+		</item>
+		<item label="Disk Manager">
+			<action name="Execute">
+				<execute>su-to-root -X -c /usr/sbin/disk-manager</execute>
+			</action>
+		</item>
+		<item label="Reconfigure">
+			<action name="Reconfigure"/>
+		</item>
+		<separator/>
+		<item label="Exit">
+			<action name="Execute">
+				<execute>obsession-logout</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>

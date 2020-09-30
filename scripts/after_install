@@ -1,0 +1,10 @@
+## posle instalacije dodati:
+## sudo geany ~/.bashrc
+## export PATH=$PATH:/opt
+## export PATH=$PATH:/sbin
+## export PATH=$PATH:/usr/sbin
+## export PATH=$PATH:$HOME/.scripts
+
+
+## sudo geany /etc/sudoers
+## speja ALL=(ALL) NOPASSWD: ALL
