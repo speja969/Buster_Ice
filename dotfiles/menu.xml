@@ -24,9 +24,9 @@
 		</item>
 		<separator/>
 		<separator/>
-		<item label="PCManFM">
+		<item label="PCManFM-qt">
 			<action name="Execute">
-				<execute>pcmanfm</execute>
+				<execute>pcmanfm-qt</execute>
 			</action>
 		</item>
 		<item label="Double Commander">
