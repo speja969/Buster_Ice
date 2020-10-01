@@ -1,0 +1,44 @@
+#!/bin/bash
+
+default_user=$(logname 2>/dev/null || echo ${SUDO_USER:-${USER}})
+HOME="/home/${default_user}"
+
+mkdir -p ~/.config/geany/colorschemes
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/monokai.conf -O ~/.config/geany/colorschemes/monokai.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/bespin.conf -O ~/.config/geany/colorschemes/bespin.conf 
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/black.conf -O ~/.config/geany/colorschemes/black.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/darcula.conf -O ~/.config/geany/colorschemes/monokai.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/dark.conf -O ~/.config/geany/colorschemes/darcula.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/dark-colors.conf -O ~/.config/geany/colorschemes/dark.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/dark-fruit-salad.conf -O ~/.config/geany/colorschemes/dark-fruit-salad.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/delt-dark.conf -O ~/.config/geany/colorschemes/delt-dark.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/epsilon.conf -O ~/.config/geany/colorschemes/epsilon.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/fluffy.conf -O ~/.config/geany/colorschemes/fluffy.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/gedit.conf -O ~/.config/geany/colorschemes/gedit.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/github.conf -O ~/.config/geany/colorschemes/github.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/himbeere.conf -O ~/.config/geany/colorschemes/himbeere.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/inkpot.conf -O ~/.config/geany/colorschemes/inkpot.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/kugel.conf -O ~/.config/geany/colorschemes/kugel.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/metallic-bottle.conf -O ~/.config/geany/colorschemes/metallic-bottle.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/notepad-plus-plus.conf -O ~/.config/geany/colorschemes/notepad-plus-plus.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/oblivion2.conf -O ~/.config/geany/colorschemes/oblivion2.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/pygments.conf -O ~/.config/geany/colorschemes/pygments.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/railcasts2.conf -O ~/.config/geany/colorschemes/railcasts2.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/mc.conf -O ~/.config/geany/colorschemes/mc.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/retro.conf -O ~/.config/geany/colorschemes/retro.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/sleepy-pastel.conf -O ~/.config/geany/colorschemes/sleepy-pastel.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/slushpoppies.conf -O ~/.config/geany/colorschemes/slushpoppies.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/solarized-dark.conf -O ~/.config/geany/colorschemes/solarized-dark.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/solarized-light.conf -O ~/.config/geany/colorschemes/solarized-light.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/spyder-dark.conf -O ~/.config/geany/colorschemes/spyder-dark.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/steampunk.conf -O ~/.config/geany/colorschemes/steampunk.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/tango-dark.conf -O ~/.config/geany/colorschemes/tango-dark.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/tango-light.conf -O ~/.config/geany/colorschemes/tango-light.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/tinge.conf -O ~/.config/geany/colorschemes/tinge.conf 
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/ubuntu.conf -O ~/.config/geany/colorschemes/ubuntu.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/vibrant-ink.conf -O ~/.config/geany/colorschemes/vibrant-ink.conf
+wget https://raw.github.com/geany/geany-themes/master/colorschemes/zenburn.conf -O ~/.config/geany/colorschemes/zenburn.conf
+
+sudo chmod --recursive 777 ~/.config/geany
+
+
