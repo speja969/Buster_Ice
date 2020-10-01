@@ -3,11 +3,11 @@
 default_user=$(logname 2>/dev/null || echo ${SUDO_USER:-${USER}})
 HOME="/home/${default_user}"
 
-echo 'deb http://download.opensuse.org/repositories/home:/Head_on_a_Stick:/obmenu-generator/Debian_10/ /' | sudo tee /etc/apt/sources.list.d/home:Head_on_a_Stick:obmenu-generator.list
+echo 'deb http://download.opensuse.org/repositories/home:/Head_on_a_Stick:/obmenu-generator/Debian_Testing/ /' | sudo tee /etc/apt/sources.list.d/home:Head_on_a_Stick:obmenu-generator.list
 
-sudo sed -i 's!deb http://download.opensuse.org/repositories/home:/Head_on_a_Stick:/obmenu-generator/Debian_10/ /!deb [trusted=yes] http://download.opensuse.org/repositories/home:/Head_on_a_Stick:/obmenu-generator/Debian_10/ /!' /etc/apt/sources.list.d/home:Head_on_a_Stick:obmenu-generator.list
+sudo sed -i 's!deb http://download.opensuse.org/repositories/home:/Head_on_a_Stick:/obmenu-generator/Debian_Testing/ /!deb [trusted=yes] http://download.opensuse.org/repositories/home:/Head_on_a_Stick:/obmenu-generator/Debian_10/ /!' /etc/apt/sources.list.d/home:Head_on_a_Stick:obmenu-generator.list
 
-curl -fsSL https://download.opensuse.org/repositories/home:Head_on_a_Stick:obmenu-generator/Debian_10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home:Head_on_a_Stick:obmenu-generator.gpg > /dev/null
+curl -fsSL https://download.opensuse.org/repositories/home:Head_on_a_Stick:obmenu-generator/Debian_Testing/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home:Head_on_a_Stick:obmenu-generator.gpg > /dev/null
 
 sudo apt update
 
