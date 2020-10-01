@@ -102,6 +102,10 @@ cp ~/Bullseye_Pejax/scripts/screeny ~/.scripts
 ## script for reinstall youtube-dl
 cp ~/Bullseye_Pejax/scripts/reinstall_youtube-dl.sh ~/.scripts
 
+## Geany theme settings
+cp ~/Buster_Pejax_v2/scripts/settings_geany ~/.scripts
+sudo ./settings_geany
+
 ## obmenu-generator
 cp ~/Bullseye_Pejax/scripts/obmenu-generator.sh ~/.scripts
 
