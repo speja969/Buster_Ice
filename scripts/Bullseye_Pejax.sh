@@ -137,6 +137,13 @@ sudo ./install.sh
 cd ~/projects/debian-openbox/config_shortcut-kill-x
 sudo ./install.sh
 
+cd ~/projects/debian-openbox/10_openbox_nomacs-viewer
+sudo ./install.sh
+sudo chmod --recursive 777 ~/.config/nomacs
+
+cd ~/projects/debian-openbox/config_disable-services
+sudo ./install.sh
+
 # Copy wallpapers folderes
 sudo cp -r ~/Bullseye_Pejax/WALLPAPERS/Wallpapers_Debian /usr/share/backgrounds
 sudo cp -r ~/Bullseye_Pejax/WALLPAPERS/wallpapers-pixabay /usr/share/backgrounds
