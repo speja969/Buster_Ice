@@ -35,6 +35,7 @@ cp ~/Bullseye_Pejax/dotfiles/compton.conf ~/.config/
 cp ~/Bullseye_Pejax/dotfiles/autostart.sh ~/.config/openbox
 
 cp ~/Bullseye_Pejax/dotfiles/.Xresources ~/
+sudo chmod 777 ~/.Xresources
 
 cp ~/Bullseye_Pejax/dotfiles/rc.xml ~/.config/openbox
 
