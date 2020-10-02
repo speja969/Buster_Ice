@@ -101,7 +101,7 @@
 		</item>
 		<item label="GParted">
 			<action name="Execute">
-				<execute>/usr/sbin/disk-manager</execute>
+				<execute>/usr/sbin/gparted</execute>
 			</action>
 		</item>
 		<item label="Reconfigure">
