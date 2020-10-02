@@ -99,9 +99,9 @@
 				<execute>obconf</execute>
 			</action>
 		</item>
-		<item label="Disk Manager">
+		<item label="GParted">
 			<action name="Execute">
-				<execute>su-to-root -X -c /usr/sbin/disk-manager</execute>
+				<execute>/usr/sbin/disk-manager</execute>
 			</action>
 		</item>
 		<item label="Reconfigure">
