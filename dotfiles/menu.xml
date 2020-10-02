@@ -89,11 +89,6 @@
 		</item>
 		<separator/>
 		<separator/>
-		<item label="OBmenu">
-			<action name="Execute">
-				<execute>obmenu</execute>
-			</action>
-		</item>
 		<item label="ObConf">
 			<action name="Execute">
 				<execute>obconf</execute>
