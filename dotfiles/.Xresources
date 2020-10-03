@@ -2,8 +2,8 @@
 URxvt.scrollBar: false
 
 ! FONTS
-URxvt.font:xft:UbuntuMono:pixelsize=18
-URxvt.boldfont:xft:UbuntuMono-Bold:pixelsize=18
+URxvt.font:             xft:Ubuntu Mono:style=Regular:pixelsize=16
+URxvt.boldFont:         xft:Ubuntu Mono:style=Bold:pixelsize=16
 
 ! special
 !*.foreground:   #c7ccd1
