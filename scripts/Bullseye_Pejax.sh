@@ -192,4 +192,7 @@ echo "Exec=su-to-root -X -c /usr/sbin/gparted" > /tmp/gparted_replacement
 
 sudo sed -i "s/^.*Exec=/usr/sbin/gparted.*$/$(cat /tmp/gparted_replacement)/" /usr/share/applications/gparted.desktop
 
-
+cp -R ~/Buster_Mibox/ext ~/.urxvt/ext/
+sudo chmod -R 777 ~/.urxvt
+sudo chmod 777 ~/.Xresources
+cd ~; ln -s .Xresources .Xdefaults-$(hostname)
