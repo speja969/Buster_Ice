@@ -8,7 +8,7 @@ icontheme="$(grep gtk-icon ~/.config/gtk-3.0/settings.ini | sed 's/gtk-icon-them
 OS="$(cat /etc/os-release | grep PRETTY_NAME | sed 's/PRETTY_NAME=//g'| sed 's/"//g')"
 WM="$(wmctrl -m | awk 'NR==1 {print $2}')"
 #termfont="$(gsettings get org.gnome.desktop.interface monospace-font-name | sed "s/'//g" | awk '{print $1}')"
-resolution="$(xrandr | grep \* | sed 's/59.95\*+//g')"
+resolution="$(xdpyinfo | awk '/dimensions/{print $2}')"
 #Desktop="${XDG_CURRENT_DESKTOP}"
 Kernel="$(uname -sr)"
 Uptime="$(uptime -p | sed 's/up //')"
