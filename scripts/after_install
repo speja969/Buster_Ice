@@ -4,7 +4,49 @@
 ## export PATH=$PATH:/sbin
 ## export PATH=$PATH:/usr/sbin
 ## export PATH=$PATH:$HOME/.scripts
+## export PATH=$PATH:/usr/local/bin
 
-
+## da unosenje password-a posle sudo komande postane nepotrebno:
 ## sudo geany /etc/sudoers
 ## speja ALL=(ALL) NOPASSWD: ALL
+
+
+## kreiranje swap fajla        # ako nismo prilikom instalacije formirali swap particiju
+## sudo fallocate -l 1G /swapfile    # da swap fajl bude 1 GB
+## ako komanda fallocate ne radi onda idemo ovako:
+   sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+## sudo chmod 600 /swapfile
+## sudo mkswap /swapfile
+## sudo swapon /swapfile
+## da bi swap fajl ostao trajno (i posle restarta)
+   sudo nano /etc/fstab
+   /swapfile swap swap defaults 0 0     # unesemo ovu liniju u fajl /etc/fstab
+## na kraju provera da li je swap fajl aktivan:
+   sudo swapon --show
+## provera "swappiness" vrednosti odnosno koliko cesto sistem koristi swap prostor
+   cat /proc/sys/vm/swappiness
+   default je 60
+   Vrednost je izmedju 0 - 100. 
+   Sto je blize nuli znaci da sistem izbegava koriscenje swap prostora.
+   mozemo zadati sistemu "swappiness" vrednost npr. 10:
+   sudo sysctl vm.swappiness=10
+   da bi ovaj parametar ostao trajno (i posle restarta):
+   sudo nano /etc/sysctl.conf
+   vm.swappiness=10         # dodajemo ovu liniju fajlu /etc/sysctl.conf
+## brisanje swap fajla:
+   sudo swapoff -v /swapfile    # prvo deaktiviranje
+   sudo nano /etc/fstab         
+   brisemo liniju /swapfile swap swap defaults 0 0 
+   sudo rm /swapfile
+
+## podesavanje QT tema na GTK baziranom sistemu:
+   sudo apt-get install qt4-qtconfig
+   sudo apt-get install qt5-style-plugins
+   otvorimo QT 4 settings aplikaciju i u tabu Appearance promenimo GUI Style u    GTK+
+   Iz padajuceg menija kliknemo save
+   Za QT 5 aplikacije:
+   sudo su root
+   sudo echo "QT_QPA_PLATFORMTHEME=gtk2" >> /etc/environment
+   exit
+
+
