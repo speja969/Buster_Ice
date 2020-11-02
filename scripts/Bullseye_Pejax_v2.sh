@@ -9,6 +9,7 @@ mkdir ~/.config
 
 sudo chmod 777 ~/.config
 
+
 mkdir ~/.config/openbox
 
 mkdir ~/.config/tint2
