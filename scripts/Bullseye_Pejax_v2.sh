@@ -25,6 +25,7 @@ sudo apt-get install -y openbox obconf rxvt-unicode micro mousepad compton compt
 sudo apt install -y k3b --no-install-recommends 
 sudo apt install -y transmission-qt --no-install-recommends
 sudo apt install -y pcmanfm-qt --no-install-recommends
+sudo apt install -y nm-tray --no-install-recommends
 sudo apt autoremove
 
 cp ~/Bullseye_Pejax_v2/dotfiles/tint2rc ~/.config/tint2
