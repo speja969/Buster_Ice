@@ -20,26 +20,17 @@ sudo apt-get install -y software-properties-common && sudo apt-add-repository co
 
 sudo apt-get update
 
-sudo apt-get install -y openbox obconf rxvt-unicode micro mousepad compton compton-conf firefox-esr tint2 menu pulseaudio xsel numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-misc-nonfree firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop gparted sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git wmctrl network-manager network-manager-gnome lightdm
+sudo apt-get install -y rxvt-unicode micro mousepad compton compton-conf firefox-esr xfburn pulseaudio xsel numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-misc-nonfree firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop gparted sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git wmctrl network-manager network-manager-gnome xorg xserver-xorg icewm icewm-common
 
-sudo apt install -y k3b --no-install-recommends 
 sudo apt install -y transmission-qt --no-install-recommends
 sudo apt install -y pcmanfm-qt --no-install-recommends
 sudo apt install -y nm-tray --no-install-recommends
 sudo apt autoremove
 
-cp ~/Bullseye_Pejax_v2/dotfiles/tint2rc ~/.config/tint2
-
 cp ~/Bullseye_Pejax_v2/dotfiles/compton.conf ~/.config/
-
-cp ~/Bullseye_Pejax_v2/dotfiles/autostart.sh ~/.config/openbox
 
 cp ~/Bullseye_Pejax_v2/dotfiles/.Xresources ~/
 sudo chmod 777 ~/.Xresources
-
-cp ~/Bullseye_Pejax_v2/dotfiles/rc.xml ~/.config/openbox
-
-cp ~/Bullseye_Pejax_v2/dotfiles/menu.xml ~/.config/openbox
 
 cp ~/Bullseye_Pejax_v2/dotfiles/keyboard.sh ~/
 
@@ -68,11 +59,7 @@ sudo sed -i 's/<allow_active>auth_admin_keep/<allow_active>yes/' /usr/share/polk
 # korekcija autorizacije za GParted
 sudo sed -i 's/<allow_active>auth_admin/<allow_active>yes/' /usr/share/polkit-1/actions/org.gnome.gparted.policy
 
-
-sudo chmod --recursive 777 ~/.config/openbox
 sudo chmod 777 ~/keyboard.sh
-
-mkdir -p ~/Documents/DEB
 
 ## debinfo -- prikaz resursa pri otvaranju terminala
 sudo cp ~/Bullseye_Pejax_v2/scripts/debinfo /usr/bin
@@ -150,8 +137,8 @@ sudo chmod --recursive 777 ~/.config/nomacs
 cd ~/projects/debian-openbox/config_disable-services
 sudo ./install.sh
 
-# cd ~/projects/debian-openbox/script_loginfetch
-# sudo ./install.sh
+cd ~/projects/debian-openbox/script_loginfetch
+sudo ./install.sh
 
 # Copy wallpapers folderes
 sudo cp -r ~/Bullseye_Pejax_v2/WALLPAPERS/Wallpapers_Debian /usr/share/backgrounds
@@ -174,7 +161,6 @@ sudo chmod --recursive 777 ~/.config/nitrogen
 ## setting default text editor
 xdg-mime default pcmanfm-qt.desktop inode/directory
 
-
 ## settings htop.desktop & ranger.desktop files
 echo "Exec=x-terminal-emulator -T 'htop task manager' -e htop" > /tmp/htop_replacement
 
@@ -194,10 +180,6 @@ sudo sed -i "s/^.*Exec=/usr/sbin/gparted.*$/$(cat /tmp/gparted_replacement)/" /u
 
 mkdir -p ~/.urxvt/ext
 cp -p ~/Bullseye_Pejax_v2/ext/* ~/.urxvt/ext/
-
-sudo apt update
-sudo apt install icewm icewm-common
-sudo apt update
 
 sudo cp -p --recursive /home/$(logname)/Bullseye_Pejax_v2/scripts/wingrid* /usr/local/bin/
 mkdir ~/.config/wingrid
