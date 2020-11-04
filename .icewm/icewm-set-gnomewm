@@ -1,0 +1,36 @@
+#!/bin/sh
+
+for arg
+do
+    case $arg in
+        -C|--copying)
+            cat <<COPYING
+IceWM is licensed under the GNU Library General Public License.
+See the file COPYING in the distribution for full details.
+
+COPYING
+            exit 0
+            ;;
+        -V|--version)
+            echo "$0 version 1.4.x, Copyrighted."
+            exit 0
+            ;;
+        -h|-\?|--help|--\?)
+            echo "Usage: $0 [-h|-V|-C]"
+            echo "Set the Gnome windowmanager to IceWM"
+            exit 0
+            ;;
+        *)
+            : echo "$0: Ignoring argument '$arg'." >&2
+            ;;
+    esac
+done
+
+echo Previous window manager:
+gconftool-2 -g /desktop/gnome/session/required_components/windowmanager
+
+
+gconftool-2 -s /desktop/gnome/session/required_components/windowmanager --type string icewm
+
+echo New window manager:
+gconftool-2 -g /desktop/gnome/session/required_components/windowmanager

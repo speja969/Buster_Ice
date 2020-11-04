@@ -193,6 +193,20 @@ sudo sed -i "s/^.*Exec=/usr/sbin/gparted.*$/$(cat /tmp/gparted_replacement)/" /u
 mkdir -p ~/.urxvt/ext
 cp -p ~/Bullseye_Pejax_v2/ext/* ~/.urxvt/ext/
 
+sudo apt update
+sudo apt install icewm icewm-common
+sudo apt update
+
+sudo cp -p --recursive /home/$(logname)/Bullseye_Pejax_v2/scripts/wingrid* /usr/local/bin/
+mkdir ~/.config/wingrid
+cp -p ~/Bullseye_Pejax_v2/dotfiles/wingrid.conf ~/.config/wingrid/
+
+sudo cp -p ~/Bullseye_Pejax_v2/scripts/bl-exit /usr/local/bin/
+
+sudo chmod 700 /usr/local/bin/bl-exit
+
+sudo cp -p --recursive  /home/$(logname)/Bullseye_Pejax_v2/.icewm /home/$(logname)/
+
 sudo chown -R $(logname):$(logname) /home/$(logname)/
 find /home/$(logname) -name '.*' | xargs sudo chown $(logname):$(logname)
 find /home/$(logname) -type f | xargs sudo chmod 700

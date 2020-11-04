@@ -1,0 +1,15 @@
+# This is a default toolbar definition file for IceWM
+#
+# Place your personal variant in $HOME/.icewm directory.
+
+# prog  "Terminator" ! x-terminal-emulator
+prog    "URxvt" urxvt_48x48 urxvtc
+prog    "PCManFM-QT" system-file-manager.png pcmanfm-qt
+prog    "Synaptic" synaptic synaptic-pkexec
+prog    "DoubleCmd" doublecmd doublecmd
+prog    "Geany" geany geany
+prog    "Firefox" ! x-www-browser
+prog    "VLC" vlc vlc
+prog    "NCMPCPP" ncmpcpp_48x48 x-terminal-emulator -e ncmpcpp
+prog    "Gmrun" gmrun gmrun
+

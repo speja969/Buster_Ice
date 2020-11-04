@@ -1,0 +1,25 @@
+#!/bin/sh
+
+export PATH="${PATH}:$HOME/.scripts"
+export PATH="${PATH}:/usr/local/bin"
+
+nitrogen --restore & 
+
+urxvtd -q &
+
+pnmixer &
+
+~/keyboard.sh &
+
+fbxkb &
+
+#~/conkystartup.sh
+sleep 10 && /usr/bin/conky-session &
+
+compton -cC -i 0.85 -e 0.85 -m 0.9 -r 4 -l -4 -t -4 &
+
+xscreensaver -no-splash &
+
+nm-applet &
+
+numlockx on &
