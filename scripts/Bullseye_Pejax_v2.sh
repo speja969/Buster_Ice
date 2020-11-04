@@ -24,7 +24,7 @@ sudo apt-get install -y rxvt-unicode micro mousepad compton compton-conf firefox
 
 sudo apt install -y transmission-qt --no-install-recommends
 sudo apt install -y pcmanfm-qt --no-install-recommends
-sudo apt install -y nm-tray --no-install-recommends
+# sudo apt install -y nm-tray --no-install-recommends
 sudo apt autoremove
 
 cp ~/Bullseye_Pejax_v2/dotfiles/compton.conf ~/.config/
