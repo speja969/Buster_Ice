@@ -17,7 +17,7 @@ key "Super+h"               x-terminal-emulator -e htop
 key "Super+Escape"          xkill
 key "Super+l"               xscreensaver-command -lock
 key "Super+v"               pavucontrol
-key "Super+x"               /usr/local/bin/bl-exit
+key "Super+x"               /usr/local/bin/logout_dmenu.sh
 # key "Alt+Ctrl+s"            xdg-open https://searx.be/
 
 key "Super+KP_Subtract"     amixer sset Master 5%-
