@@ -23,3 +23,6 @@ xscreensaver -no-splash &
 nm-applet &
 
 numlockx on &
+
+# Start MPD
+sleep 3.5 && mpd ~/.mpd/mpd.conf
