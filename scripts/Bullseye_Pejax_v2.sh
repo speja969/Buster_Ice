@@ -97,66 +97,67 @@ cp ~/Bullseye_Pejax_v2/scripts/settings_geany ~/.scripts
 sudo ./settings_geany
 
 ## obmenu-generator
-cp ~/Bullseye_Pejax_v2/scripts/obmenu-generator.sh ~/.scripts
+# cp ~/Bullseye_Pejax_v2/scripts/obmenu-generator.sh ~/.scripts
 
 mkdir ~/projects
 cd ~/projects
-git clone https://github.com/speja969/debian-openbox.git
+# git clone https://github.com/speja969/debian-openbox.git
 
 sudo chmod --recursive 777 ~/projects
 sudo chmod --recursive 777 ~/.scripts
 
-cd ~/projects/debian-openbox/10_openbox_terminator
-sudo ./install.sh
+# cd ~/projects/debian-openbox/10_openbox_terminator
+# sudo ./install.sh
 
-cd ~/projects/debian-openbox/10_openbox_arc-theme-gtk
-sudo ./install.sh
+# cd ~/projects/debian-openbox/10_openbox_arc-theme-gtk
+# sudo ./install.sh
 
-cd ~/projects/debian-openbox/10_openbox_numix-paper-icons
-sudo ./install.sh
+# cd ~/projects/debian-openbox/10_openbox_numix-paper-icons
+# sudo ./install.sh
 
-cd ~/projects/debian-openbox/install_wpsoffice
-sudo ./install.sh
+cd && wget -O wps-office.deb https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9719/wps-office_11.1.0.9719.XA_amd64.deb
+sudo dpkg -i wps-office.deb
+sudo apt-get -f install && rm wps-office.deb
 cp ~/Bullseye_Pejax_v2/scripts/install_missing_wps_fonts.sh ~/.scripts
 cd ~/.scripts
 sudo ./install_missing_wps_fonts.sh
 
-cd ~/projects/debian-openbox/script_install_dt-dark-theme
-sudo ./install.sh
+# cd ~/projects/debian-openbox/script_install_dt-dark-theme
+# sudo ./install.sh
 
-cd ~/projects/debian-openbox/10_openbox_conky
-sudo ./install.sh
+# cd ~/projects/debian-openbox/10_openbox_conky
+# sudo ./install.sh
 
-cd ~/projects/debian-openbox/config_shortcut-kill-x
-sudo ./install.sh
+# cd ~/projects/debian-openbox/config_shortcut-kill-x
+# sudo ./install.sh
 
-cd ~/projects/debian-openbox/10_openbox_nomacs-viewer
-sudo ./install.sh
-sudo chmod --recursive 777 ~/.config/nomacs
+# cd ~/projects/debian-openbox/10_openbox_nomacs-viewer
+# sudo ./install.sh
+# sudo chmod --recursive 777 ~/.config/nomacs
 
-cd ~/projects/debian-openbox/config_disable-services
-sudo ./install.sh
+# cd ~/projects/debian-openbox/config_disable-services
+# sudo ./install.sh
 
-cd ~/projects/debian-openbox/script_loginfetch
-sudo ./install.sh
+# cd ~/projects/debian-openbox/script_loginfetch
+# sudo ./install.sh
 
 # Copy wallpapers folderes
 sudo cp -r ~/Bullseye_Pejax_v2/WALLPAPERS/Wallpapers_Debian /usr/share/backgrounds
 sudo cp -r ~/Bullseye_Pejax_v2/WALLPAPERS/wallpapers-pixabay /usr/share/backgrounds
 
-sudo sed -i 's!wallpapers-pack1!wallpapers-pixabay!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/install.sh
-sudo sed -i 's!bl-colorful-aptenodytes-forsteri-by-nixiepro.png!kuala-lumpur-1820944_1920.jpg!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/install.sh
-sudo sed -i 's!/usr/share/backgrounds/wallpapers-pack1/bl-colorful-aptenodytes-forsteri-by-nixiepro.png!/usr/share/backgrounds/wallpapers-pixabay/kuala-lumpur-1820944_1920.jpg!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/bg-saved.cfg
+# sudo sed -i 's!wallpapers-pack1!wallpapers-pixabay!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/install.sh
+# sudo sed -i 's!bl-colorful-aptenodytes-forsteri-by-nixiepro.png!kuala-lumpur-1820944_1920.jpg!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/install.sh
+# sudo sed -i 's!/usr/share/backgrounds/wallpapers-pack1/bl-colorful-aptenodytes-forsteri-by-nixiepro.png!/usr/share/backgrounds/wallpapers-pixabay/kuala-lumpur-1820944_1920.jpg!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/bg-saved.cfg
 
 # ACTION: Install nitrogen tool, copy more wallpapers pack and set default wallpaper to all users
-cd ~/projects/debian-openbox/15_openbox_wallpaper-packs
-sudo ./install.sh
+# cd ~/projects/debian-openbox/15_openbox_wallpaper-packs
+# sudo ./install.sh
 
 sudo cp ~/Bullseye_Pejax_v2/WALLPAPERS/Wallpapers_Debian/lightdm_login.jpg /usr/share/images/desktop-base
 sudo chmod 777 /usr/share/images/desktop-base/lightdm_login.jpg
 sudo sed -i 's!#background=!background=/usr/share/images/desktop-base/lightdm_login.jpg!' /etc/lightdm/lightdm-gtk-greeter.conf
 
-sudo chmod --recursive 777 ~/.config/nitrogen
+# sudo chmod --recursive 777 ~/.config/nitrogen
 
 ## setting default text editor
 xdg-mime default pcmanfm-qt.desktop inode/directory
