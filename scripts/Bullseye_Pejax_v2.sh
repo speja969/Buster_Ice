@@ -20,7 +20,7 @@ sudo apt-get install -y software-properties-common && sudo apt-add-repository co
 
 sudo apt-get update
 
-sudo apt-get install -y rxvt-unicode micro mousepad compton compton-conf firefox-esr xfburn pulseaudio xsel numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-misc-nonfree firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop gparted sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git wmctrl network-manager network-manager-gnome xorg xserver-xorg icewm icewm-common yad pm-utils
+sudo apt-get install -y rxvt-unicode micro mousepad compton compton-conf firefox-esr xfburn pulseaudio xsel numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-misc-nonfree firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop gparted sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git wmctrl network-manager network-manager-gnome xorg xserver-xorg icewm icewm-common yad pm-utils lightdm
 
 sudo apt install -y transmission-qt --no-install-recommends
 sudo apt install -y pcmanfm-qt --no-install-recommends
@@ -186,9 +186,9 @@ sudo cp -p --recursive /home/$(logname)/Bullseye_Pejax_v2/scripts/wingrid* /usr/
 mkdir ~/.config/wingrid
 cp -p ~/Bullseye_Pejax_v2/dotfiles/wingrid.conf ~/.config/wingrid/
 
-sudo cp -p ~/Bullseye_Pejax_v2/scripts/bl-exit /usr/local/bin/
+sudo cp -p ~/Bullseye_Pejax_v2/scripts/logout_dmenu.sh /usr/local/bin/
 
-sudo chmod 700 /usr/local/bin/bl-exit
+sudo chmod 700 /usr/local/bin/logout_dmenu.sh
 
 sudo cp -p --recursive  /home/$(logname)/Bullseye_Pejax_v2/.icewm /home/$(logname)/
 
