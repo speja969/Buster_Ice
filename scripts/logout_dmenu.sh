@@ -8,9 +8,9 @@ DMENU='dmenu -i -b -fn -xos4-terminus-medium-r-*--12-*-*-*-*-*-iso10646-1 -nb #0
 choice=$(echo -e "logout\nshutdown\nreboot\nsuspend\nhibernate" | $DMENU)
 
 case "$choice" in
-  logout) kill $(pgrep X) & ;;
-  shutdown) sudo shutdown -h now & ;;
-  reboot) sudo shutdown -r now & ;;
+  logout) killall -QUIT icewm & ;;
+  shutdown) test -e /run/systemd/system && systemctl poweroff || sudo -n /sbin/poweroff & ;;
+  reboot) test -e /run/systemd/system && systemctl reboot || sudo -n /sbin/reboot & ;;
   suspend) test -e /run/systemd/system && systemctl suspend || sudon -n /usr/sbin/pm-suspend & ;;
   hibernate) sudo pm-hibernate & ;;
 esac
