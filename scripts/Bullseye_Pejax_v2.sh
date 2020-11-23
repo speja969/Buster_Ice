@@ -20,7 +20,7 @@ sudo apt-get install -y software-properties-common && sudo apt-add-repository co
 
 sudo apt-get update
 
-sudo apt-get install -y rxvt-unicode micro mousepad compton compton-conf firefox-esr xfburn pulseaudio xsel numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-misc-nonfree firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop gparted sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git wmctrl network-manager network-manager-gnome xorg xserver-xorg icewm icewm-common yad pm-utils lightdm
+sudo apt-get install -y rxvt-unicode micro mousepad compton compton-conf firefox-esr xfburn pulseaudio xsel numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-misc-nonfree firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop gparted sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git wmctrl network-manager network-manager-gnome xorg xserver-xorg icewm icewm-common yad pm-utils psmisc lightdm
 
 sudo apt install -y transmission-qt --no-install-recommends
 sudo apt install -y pcmanfm-qt --no-install-recommends
