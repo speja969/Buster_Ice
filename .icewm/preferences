@@ -398,7 +398,7 @@ TaskBarShowNetStatus=0 # 0/1
 # MultiByte=1 # 0/1
 
 #  Confirm logout
-# ConfirmLogout=1 # 0/1
+ConfirmLogout=0 # 0/1
 
 #  Don't cut client windows by shapes set trough frame corner pixmap
 # ShapesProtectClientWindow=1 # 0/1
