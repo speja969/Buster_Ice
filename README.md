@@ -1,5 +1,5 @@
-## **Bullseye Pejax** (instructions in Serbian)
-### *Debian Bullseye sa OpenBox WM*
+## **Buster Ice** (instructions in Serbian)
+### *Debian Buster sa IceWM*
 
 1. Potrebno je prvo skinuti sa Debianovog sajta ISO instalacioni fajl:
     * https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.6.0-amd64-netinst.iso
@@ -14,16 +14,16 @@
 _` sudo apt update && sudo apt full-upgrade`_
 1. instaliranje git-a  
 _`sudo apt install git`_
-1. kloniranje git repozitorijuma Bullseye_Pejax  
-_`git clone https://github.com/speja969/Bullseye_Pejax.git`_
+1. kloniranje git repozitorijuma Buster_Ice  
+_`git clone https://github.com/speja969/Buster_Ice.git`_
 1. promena aktivnog direktorijuma  
-_`cd Bullseye_Pejax`_
-1. maksimalno podizanje ovlašćenja pristupa repozitorijumu Bullseye_Pejax rekurzivno  
+_`cd Buster_Ice`_
+1. maksimalno podizanje ovlašćenja pristupa repozitorijumu Buster_Ice rekurzivno  
 _`sudo chmod --recursive 777 .`_
 1. promena aktivnog direktorijuma  
 _`cd scripts`_
-1. Startovanje skripte _Bullseye_Pejax.sh_  
-_`sudo ./Bullseye_Pejax.sh`_
+1. Startovanje skripte _Buster_Ice.sh_  
+_`sudo ./Buster_Ice.sh`_
 1. Restart  
 _`sudo reboot`_
 1. Posle restarta potrebno je u konfiguracionim fajlovima **ncmpcpp** (_`~/.mpd/mpd.conf`_ i _`~/.ncmpcpp/config`_)  
@@ -56,3 +56,4 @@ _`sudo adduser $USER vboxsf`_
 ![PCManFM](https://user-images.githubusercontent.com/62497469/92327132-e00d2400-f057-11ea-9c7f-0be41bee339d.png)
 ![rxvt-unicode](https://user-images.githubusercontent.com/62497469/92327166-07fc8780-f058-11ea-8e74-79cfda46f425.png)
 ![Xarchiver](https://user-images.githubusercontent.com/62497469/92327192-3712f900-f058-11ea-8244-359d9ba9f1a0.png)
+
