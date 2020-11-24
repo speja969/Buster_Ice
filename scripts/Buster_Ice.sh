@@ -186,6 +186,8 @@ sudo chmod 700 /usr/local/bin/logout_dmenu.sh
 
 sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.icewm /home/$(logname)/
 
+sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.config /home/$(logname)/
+
 sudo chown -R $(logname):$(logname) /home/$(logname)/
 find /home/$(logname) -name '.*' | xargs sudo chown $(logname):$(logname)
 find /home/$(logname) -type f | xargs sudo chmod 700
