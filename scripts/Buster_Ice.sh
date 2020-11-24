@@ -8,9 +8,7 @@ HOME="/home/${default_user}"
 mkdir ~/.config
 
 sudo chmod 777 ~/.config
-
-
-mkdir ~/.config/openbox
+sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.config /home/$(logname)/
 
 mkdir ~/.config/tint2
 
@@ -93,7 +91,6 @@ cp ~/Buster_Ice/scripts/reinstall_youtube-dl.sh ~/.scripts
 cp ~/Buster_Pejax_v2/scripts/settings_geany ~/.scripts
 cd ~/.scripts
 sudo ./settings_geany
-sudo chmod 777 ~/.config/geany/geany.conf
 
 mkdir ~/projects
 cd ~/projects
@@ -188,7 +185,7 @@ sudo chmod 700 /usr/local/bin/logout_dmenu.sh
 
 sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.icewm /home/$(logname)/
 
-sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.config /home/$(logname)/
+
 sudo chmod --recursive 777 ~/.config/nitrogen
 
 sudo chown -R $(logname):$(logname) /home/$(logname)/
