@@ -20,7 +20,7 @@ sudo apt-get install -y software-properties-common && sudo apt-add-repository co
 
 sudo apt-get update
 
-sudo apt-get install -y rxvt-unicode micro mousepad compton compton-conf firefox-esr xfburn pulseaudio xsel numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-misc-nonfree firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop gparted sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git wmctrl network-manager network-manager-gnome xorg xserver-xorg icewm icewm-common yad pm-utils psmisc lightdm
+sudo apt-get install -y rxvt-unicode micro mousepad compton compton-conf firefox-esr xfburn pulseaudio xsel numlockx pavucontrol mlocate lxappearance vlc arandr apt-file synaptic firmware-linux firmware-misc-nonfree firmware-linux-nonfree doublecmd-common xutils mesa-utils xarchiver htop gparted sysstat acpi hardinfo hddtemp gnome-disk-utility python3-pip ttf-mscorefonts-installer fonts-ubuntu fonts-ubuntu-console suckless-tools simplescreenrecorder font-manager ranger geany gdebi fbxkb mpv curl gmrun xscreensaver galternatives pnmixer sxiv scrot xsettingsd ffmpeg git wmctrl network-manager network-manager-gnome xorg xserver-xorg icewm icewm-common yad pm-utils psmisc nitrogen lightdm
 
 sudo apt install -y transmission-qt --no-install-recommends
 sudo apt install -y pcmanfm-qt --no-install-recommends
@@ -90,8 +90,10 @@ cp ~/Buster_Ice/scripts/screeny ~/.scripts
 cp ~/Buster_Ice/scripts/reinstall_youtube-dl.sh ~/.scripts
 
 ## Geany theme settings
-cp ~/Buster_Ice/scripts/settings_geany ~/.scripts
+cp ~/Buster_Pejax_v2/scripts/settings_geany ~/.scripts
+cd ~/.scripts
 sudo ./settings_geany
+sudo chmod 777 ~/.config/geany/geany.conf
 
 mkdir ~/projects
 cd ~/projects
@@ -187,6 +189,7 @@ sudo chmod 700 /usr/local/bin/logout_dmenu.sh
 sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.icewm /home/$(logname)/
 
 sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.config /home/$(logname)/
+sudo chmod --recursive 777 ~/.config/nitrogen
 
 sudo chown -R $(logname):$(logname) /home/$(logname)/
 find /home/$(logname) -name '.*' | xargs sudo chown $(logname):$(logname)
