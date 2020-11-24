@@ -16,7 +16,7 @@ mkdir ~/.config/tint2
 
 mkdir ~/.scripts
 
-sudo apt-get install -y software-properties-common && sudo apt-add-repository contrib && sudo apt-add-repository non-free
+sudo apt-get install -y software-properties-common && sudo apt-add-repository contrib && sudo apt-add-repository non-free && sudo apt-add-repository 'deb http://deb.debian.org/debian buster-backports main contrib non-free'
 
 sudo apt-get update
 
@@ -24,27 +24,24 @@ sudo apt-get install -y rxvt-unicode micro mousepad compton compton-conf firefox
 
 sudo apt install -y transmission-qt --no-install-recommends
 sudo apt install -y pcmanfm-qt --no-install-recommends
-# sudo apt install -y nm-tray --no-install-recommends
 sudo apt autoremove
 
-cp ~/Bullseye_Pejax_v2/dotfiles/compton.conf ~/.config/
+cp ~/Buster_Ice/dotfiles/compton.conf ~/.config/
 
-cp ~/Bullseye_Pejax_v2/dotfiles/.Xresources ~/
+cp ~/Buster_Ice/dotfiles/.Xresources ~/
 sudo chmod 777 ~/.Xresources
 
-cp ~/Bullseye_Pejax_v2/dotfiles/keyboard.sh ~/
+cp ~/Buster_Ice/dotfiles/keyboard.sh ~/
 
-sudo cp ~/Bullseye_Pejax_v2/dotfiles/rs.png /usr/share/fbxkb/images/rs.png
+sudo cp ~/Buster_Ice/dotfiles/rs.png /usr/share/fbxkb/images/rs.png
 
 mkdir ~/.config/mpv
 
-cp ~/Bullseye_Pejax_v2/dotfiles/mpv.conf ~/.config/mpv
+cp ~/Buster_Ice/dotfiles/mpv.conf ~/.config/mpv
 
-sudo cp ~/Bullseye_Pejax_v2/dotfiles/ncmpcpp_48x48.png /usr/share/icons
+sudo cp ~/Buster_Ice/dotfiles/ncmpcpp_48x48.png /usr/share/icons
 
 sudo chmod 777 /usr/share/icons/ncmpcpp_48x48.png
-
-
 
 # korekcija autorizacije za gdebi
 sudo sed -i 's/<allow_active>auth_admin/<allow_active>yes/' /usr/share/polkit-1/actions/com.ubuntu.pkexec.gdebi-gtk.policy
@@ -62,22 +59,22 @@ sudo sed -i 's/<allow_active>auth_admin/<allow_active>yes/' /usr/share/polkit-1/
 sudo chmod 777 ~/keyboard.sh
 
 ## debinfo -- prikaz resursa pri otvaranju terminala
-sudo cp ~/Bullseye_Pejax_v2/scripts/debinfo /usr/bin
+sudo cp ~/Buster_Ice/scripts/debinfo /usr/bin
 sudo chmod 777 /usr/bin/debinfo
 echo debinfo >> ~/.bashrc
 
 ## instalacija comptona
-cp ~/Bullseye_Pejax_v2/scripts/install_compton.sh ~/.scripts
+cp ~/Buster_Ice/scripts/install_compton.sh ~/.scripts
 mkdir ~/bin
-cp ~/Bullseye_Pejax_v2/dotfiles/start-compton.sh ~/bin
+cp ~/Buster_Ice/dotfiles/start-compton.sh ~/bin
 sudo chmod --recursive 777 ~/bin
 
 ## instalacija ncmpcpp
 sudo apt install -y mpd ncmpcpp
 mkdir ~/.mpd
 mkdir ~/.ncmpcpp
-cp ~/Bullseye_Pejax_v2/dotfiles/config ~/.ncmpcpp
-cp ~/Bullseye_Pejax_v2/dotfiles/mpd.conf ~/.mpd
+cp ~/Buster_Ice/dotfiles/config ~/.ncmpcpp
+cp ~/Buster_Ice/dotfiles/mpd.conf ~/.mpd
 touch ~/.mpd/mpd.db ~/.mpd/mpd.log ~/.mpd/mpd.pid
 sudo chmod --recursive 777 ~/.mpd
 sudo chmod --recursive 777 ~/.ncmpcpp
@@ -87,17 +84,14 @@ sudo sed -i 's!Terminal=true!Terminal=false!' /usr/share/applications/ncmpcpp.de
 echo "Icon=/usr/share/icons/ncmpcpp_48x48.png" >> /usr/share/applications/ncmpcpp.desktop
 
 ## screeny
-cp ~/Bullseye_Pejax_v2/scripts/screeny ~/.scripts
+cp ~/Buster_Ice/scripts/screeny ~/.scripts
 
 ## script for reinstall youtube-dl
-cp ~/Bullseye_Pejax_v2/scripts/reinstall_youtube-dl.sh ~/.scripts
+cp ~/Buster_Ice/scripts/reinstall_youtube-dl.sh ~/.scripts
 
 ## Geany theme settings
-cp ~/Bullseye_Pejax_v2/scripts/settings_geany ~/.scripts
+cp ~/Buster_Ice/scripts/settings_geany ~/.scripts
 sudo ./settings_geany
-
-## obmenu-generator
-# cp ~/Bullseye_Pejax_v2/scripts/obmenu-generator.sh ~/.scripts
 
 mkdir ~/projects
 cd ~/projects
@@ -118,7 +112,7 @@ sudo chmod --recursive 777 ~/.scripts
 cd && wget -O wps-office.deb https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9719/wps-office_11.1.0.9719.XA_amd64.deb
 sudo dpkg -i wps-office.deb
 sudo apt-get -f install && rm wps-office.deb
-cp ~/Bullseye_Pejax_v2/scripts/install_missing_wps_fonts.sh ~/.scripts
+cp ~/Buster_Ice/scripts/install_missing_wps_fonts.sh ~/.scripts
 cd ~/.scripts
 sudo ./install_missing_wps_fonts.sh
 
@@ -142,8 +136,8 @@ sudo ./install_missing_wps_fonts.sh
 # sudo ./install.sh
 
 # Copy wallpapers folderes
-sudo cp -r ~/Bullseye_Pejax_v2/WALLPAPERS/Wallpapers_Debian /usr/share/backgrounds
-sudo cp -r ~/Bullseye_Pejax_v2/WALLPAPERS/wallpapers-pixabay /usr/share/backgrounds
+sudo cp -r ~/Buster_Ice/WALLPAPERS/Wallpapers_Debian /usr/share/backgrounds
+sudo cp -r ~/Buster_Ice/WALLPAPERS/wallpapers-pixabay /usr/share/backgrounds
 
 # sudo sed -i 's!wallpapers-pack1!wallpapers-pixabay!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/install.sh
 # sudo sed -i 's!bl-colorful-aptenodytes-forsteri-by-nixiepro.png!kuala-lumpur-1820944_1920.jpg!' ~/projects/debian-openbox/15_openbox_wallpaper-packs/install.sh
@@ -153,7 +147,7 @@ sudo cp -r ~/Bullseye_Pejax_v2/WALLPAPERS/wallpapers-pixabay /usr/share/backgrou
 # cd ~/projects/debian-openbox/15_openbox_wallpaper-packs
 # sudo ./install.sh
 
-sudo cp ~/Bullseye_Pejax_v2/WALLPAPERS/Wallpapers_Debian/lightdm_login.jpg /usr/share/images/desktop-base
+sudo cp ~/Buster_Ice/WALLPAPERS/Wallpapers_Debian/lightdm_login.jpg /usr/share/images/desktop-base
 sudo chmod 777 /usr/share/images/desktop-base/lightdm_login.jpg
 sudo sed -i 's!#background=!background=/usr/share/images/desktop-base/lightdm_login.jpg!' /etc/lightdm/lightdm-gtk-greeter.conf
 
@@ -180,17 +174,17 @@ echo "Exec=su-to-root -X -c /usr/sbin/gparted" > /tmp/gparted_replacement
 sudo sed -i "s/^.*Exec=/usr/sbin/gparted.*$/$(cat /tmp/gparted_replacement)/" /usr/share/applications/gparted.desktop
 
 mkdir -p ~/.urxvt/ext
-cp -p ~/Bullseye_Pejax_v2/ext/* ~/.urxvt/ext/
+cp -p ~/Buster_Ice/ext/* ~/.urxvt/ext/
 
-sudo cp -p --recursive /home/$(logname)/Bullseye_Pejax_v2/scripts/wingrid* /usr/local/bin/
+sudo cp -p --recursive /home/$(logname)/Buster_Ice/scripts/wingrid* /usr/local/bin/
 mkdir ~/.config/wingrid
-cp -p ~/Bullseye_Pejax_v2/dotfiles/wingrid.conf ~/.config/wingrid/
+cp -p ~/Buster_Ice/dotfiles/wingrid.conf ~/.config/wingrid/
 
-sudo cp -p ~/Bullseye_Pejax_v2/scripts/logout_dmenu.sh /usr/local/bin/
+sudo cp -p ~/Buster_Ice/scripts/logout_dmenu.sh /usr/local/bin/
 
 sudo chmod 700 /usr/local/bin/logout_dmenu.sh
 
-sudo cp -p --recursive  /home/$(logname)/Bullseye_Pejax_v2/.icewm /home/$(logname)/
+sudo cp -p --recursive  /home/$(logname)/Buster_Ice/.icewm /home/$(logname)/
 
 sudo chown -R $(logname):$(logname) /home/$(logname)/
 find /home/$(logname) -name '.*' | xargs sudo chown $(logname):$(logname)
