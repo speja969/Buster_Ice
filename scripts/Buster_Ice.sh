@@ -115,8 +115,11 @@ cp ~/Buster_Ice/scripts/install_missing_wps_fonts.sh ~/.scripts
 cd ~/.scripts
 sudo ./install_missing_wps_fonts.sh
 
-# cd ~/projects/debian-openbox/script_install_dt-dark-theme
-# sudo ./install.sh
+mkdir ~/.themes          #ako već ne postoji
+sudo chown $(logname):$(logname) ~/.themes
+sudo chmod 777 ~/.themes
+cd ~/.themes
+git clone https://gitlab.com/dwt1/dt-dark-theme.git
 
 # cd ~/projects/debian-openbox/10_openbox_conky
 # sudo ./install.sh
