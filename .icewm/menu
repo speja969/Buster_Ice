@@ -13,7 +13,7 @@ separator
 separator
 prog "PCManFM-Qt" system-file-manager.png pcmanfm-qt
 prog "Double Commander" doublecmd doublecmd
-prog "Ranger" ranger ranger
+prog "Ranger" ranger x-terminal-emulator -e ranger
 separator
 prog "Geany" geany geany
 prog "Mousepad" accessories-text-editor mousepad
