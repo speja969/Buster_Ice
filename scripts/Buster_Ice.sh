@@ -88,7 +88,7 @@ cp ~/Buster_Ice/scripts/screeny ~/.scripts
 cp ~/Buster_Ice/scripts/reinstall_youtube-dl.sh ~/.scripts
 
 ## Geany theme settings
-cp ~/Buster_Pejax_v2/scripts/settings_geany ~/.scripts
+cp ~/Buster_Ice/scripts/settings_geany ~/.scripts
 cd ~/.scripts
 sudo ./settings_geany
 
