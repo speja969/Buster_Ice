@@ -2,8 +2,8 @@
 ### *Debian Buster sa IceWM*
 
 1. Potrebno je prvo skinuti sa Debianovog sajta ISO instalacioni fajl:
-    * https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.6.0-amd64-netinst.iso
-    * ili non-free verziju https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/10.6.0+nonfree/amd64/iso-cd/firmware-10.6.0-amd64-netinst.iso
+    * https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.8.0-amd64-netinst.iso
+    * ili non-free verziju https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/10.8.0+nonfree/amd64/iso-cd/firmware-10.8.0-amd64-netinst.iso
 1. Pomoću Rufusa ili Etchera napraviti butabilni instalacioni USB Flash 
 1. Instalirati na odabranu particiju metodom INSTALL ili GRAPHICAL INSTALL (zavisno od RAM-a i procesora)
 1. Izostaviti _ROOT_ password tako da _USER_ ima automatski _SUDO_ ovlašćenja
